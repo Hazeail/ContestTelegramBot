@@ -1,4 +1,4 @@
-# Конкурсный Telegram-бот (C# / .NET Framework 4.7.2)
+﻿# Конкурсный Telegram-бот (C# / .NET Framework 4.7.2)
 
 Проект: Telegram-бот с админ-панелью (inline UI), конкурсами/рефералами и хранением данных в SQLite.
 
@@ -20,6 +20,6 @@
 ## Что не коммитится
 - `bin/`, `obj/`
 - `ContestBot/appsettings.json`, `bot_token.txt`
-- runtime-данные (`*.db`, `ContestBot/data/*`) и логи
+- runtime-данные (`*.db`, `ContestBot/data/*`) и логи.
 
 > Код проекта (как продукт) публикуется без секретов и runtime-артефактов.
