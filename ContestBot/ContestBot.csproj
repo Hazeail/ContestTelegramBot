@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B780370B-7DB9-4B60-9EF0-70B94B3CCB08}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ContestBot</RootNamespace>
+    <AssemblyName>ContestBot</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="IndexRange, Version=1.0.3.0, Culture=neutral, PublicKeyToken=35e6a3c4212514c6, processorArchitecture=MSIL">
+      <HintPath>..\packages\IndexRange.1.0.3\lib\net47\IndexRange.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.8.0.0\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.8.0.0\lib\net462\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.FileExtensions.8.0.0\lib\net462\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Json.8.0.0\lib\net462\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Physical.8.0.0\lib\net462\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileSystemGlobbing.8.0.0\lib\net462\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.8.0.0\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options.ConfigurationExtensions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.ConfigurationExtensions.8.0.0\lib\net462\Microsoft.Extensions.Options.ConfigurationExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.8.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.8.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telegram.Bot, Version=22.7.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telegram.Bot.22.7.6\lib\netstandard2.0\Telegram.Bot.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admins\AdminDirectory.cs" />
+    <Compile Include="Admins\AdminProfile.cs" />
+    <Compile Include="Admins\AdminsManagementStore.cs" />
+    <Compile Include="Admin\Channels\AdminChannelsMessagesHandler.cs" />
+    <Compile Include="Admin\Commands\AdminCommandsHandler.cs" />
+    <Compile Include="Admin\Creation\AdminContestCreationMessagesHandler.cs" />
+    <Compile Include="Admin\Creation\ContestCreationRules.cs" />
+    <Compile Include="Admin\Creation\ContestCreationState.cs" />
+    <Compile Include="Admin\Creation\ContestCreationStateMachine.cs" />
+    <Compile Include="Admin\Creation\ContestCreationStore.cs" />
+    <Compile Include="Admin\Draw\AdminDrawHandler.cs" />
+    <Compile Include="Admin\Manage\AdminContestManageMessagesHandler.cs" />
+    <Compile Include="Admin\Manage\ContestManageState.cs" />
+    <Compile Include="Admin\Manage\ContestManageStore.cs" />
+    <Compile Include="Admin\Ui\AdminAdminsUiHandler.cs" />
+    <Compile Include="Admin\Ui\AdminChannelsUiHandler.cs" />
+    <Compile Include="BotService.cs" />
+    <Compile Include="Callbacks\Actions\AdminAdminsCallbacksAction.cs" />
+    <Compile Include="Callbacks\Actions\AdminCallbacksAction\AdminCallbacksAction.ChannelPick.cs" />
+    <Compile Include="Callbacks\Actions\AdminCallbacksAction\AdminCallbacksAction.Common.cs" />
+    <Compile Include="Callbacks\Actions\AdminCallbacksAction\AdminCallbacksAction.ContestManage.cs" />
+    <Compile Include="Callbacks\Actions\AdminCallbacksAction\AdminCallbacksAction.CreateFlow.cs" />
+    <Compile Include="Callbacks\Actions\AdminCallbacksAction\AdminCallbacksAction.cs" />
+    <Compile Include="Callbacks\Actions\AdminCallbacksAction\AdminCallbacksAction.Menu.cs" />
+    <Compile Include="Callbacks\Actions\AdminCallbacksAction\AdminCallbacksAction.Publish.cs" />
+    <Compile Include="Callbacks\Actions\AdminCallbacksAction\AdminCallbacksAction.Winners.cs" />
+    <Compile Include="Callbacks\Actions\AdminChannelsCallbacksAction.cs" />
+    <Compile Include="Callbacks\Actions\AdminDrawCallbacksAction.cs" />
+    <Compile Include="Callbacks\Actions\UserContestCardCallbacksAction.cs" />
+    <Compile Include="Callbacks\Actions\UserContestsScreensAction.cs" />
+    <Compile Include="Callbacks\Actions\UserFinishedContestCardCallbacksAction.cs" />
+    <Compile Include="Callbacks\Actions\UserNavCallbacksAction.cs" />
+    <Compile Include="Callbacks\CallbackRouter.cs" />
+    <Compile Include="Callbacks\CallbackUpdateHandler.cs" />
+    <Compile Include="Callbacks\ICallbackAction.cs" />
+    <Compile Include="Callbacks\Setup\CallbackPipelineConfig.cs" />
+    <Compile Include="Callbacks\Setup\CallbackPipelineFactory.cs" />
+    <Compile Include="Channels\ChannelInfo.cs" />
+    <Compile Include="Channels\ChannelsManagementStore.cs" />
+    <Compile Include="Composition\BotCompositionRoot.cs" />
+    <Compile Include="Composition\UpdateHandlerComposer.cs" />
+    <Compile Include="Config\BotSettings.cs" />
+    <Compile Include="Contest.cs" />
+    <Compile Include="ContestManager.cs" />
+    <Compile Include="Database\Database.cs" />
+    <Compile Include="Database\Database.Admins.cs" />
+    <Compile Include="Database\Database.Channels.cs" />
+    <Compile Include="Database\Database.Contests.cs" />
+    <Compile Include="Database\Database.Drafts.cs" />
+    <Compile Include="Database\Database.Participants.cs" />
+    <Compile Include="Database\Database.Referrals.cs" />
+    <Compile Include="Database\Database.Schema.cs" />
+    <Compile Include="Database\Database.UserContext.cs" />
+    <Compile Include="Database\Database.Winners.cs" />
+    <Compile Include="Database\DbFileLocator.cs" />
+    <Compile Include="Messages\Actions\AdminChannelsMessagesAction.cs" />
+    <Compile Include="Messages\Actions\AdminCommandsMessagesAction.cs" />
+    <Compile Include="Messages\Actions\AdminContestCreationMessagesAction.cs" />
+    <Compile Include="Messages\Actions\AdminContestManageMessagesAction.cs" />
+    <Compile Include="Messages\Actions\UserStartMessagesAction.cs" />
+    <Compile Include="Messages\Actions\UserStartWithRefMessagesAction.cs" />
+    <Compile Include="Messages\IMessageAction.cs" />
+    <Compile Include="Messages\MessageRouter.cs" />
+    <Compile Include="Messages\MessageUpdateHandler.cs" />
+    <Compile Include="Messages\Setup\MessagePipelineConfig.cs" />
+    <Compile Include="Messages\Setup\MessagePipelineFactory.cs" />
+    <Compile Include="Participant.cs" />
+    <Compile Include="ParticipantManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ChannelSubscriptionService.cs" />
+    <Compile Include="Services\ContestChannelPostsService.cs" />
+    <Compile Include="Services\ContestDrawService.cs" />
+    <Compile Include="Services\ContestTimersService.cs" />
+    <Compile Include="Services\CrashLogger.cs" />
+    <Compile Include="Services\Draw\AutoDrawTickDecision.cs" />
+    <Compile Include="Services\Draw\DrawRules.cs" />
+    <Compile Include="Services\Draw\WinnerSelector.cs" />
+    <Compile Include="Services\OwnerNotificationService.cs" />
+    <Compile Include="Services\ReferralService.cs" />
+    <Compile Include="Ui\Keyboards.cs" />
+    <Compile Include="Ui\TelegramUi.cs" />
+    <Compile Include="UpdateHandler\UpdateHandler.AdminsUi.cs" />
+    <Compile Include="UpdateHandler\UpdateHandler.ChannelsUi.cs" />
+    <Compile Include="UpdateHandler\UpdateHandler.cs" />
+    <Compile Include="UpdateHandler\UpdateHandler.Pipelines.cs" />
+    <Compile Include="UpdateHandler\UpdateHandler.Timers.cs" />
+    <Compile Include="User\Start\StartHandler.cs" />
+    <Compile Include="User\UserCommandsHandler.cs" />
+    <Compile Include="User\UserUiHandler.cs" />
+    <Compile Include="Utils\CallbackDataParser.cs" />
+    <Compile Include="Utils\DateTimeParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="appsettings.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
